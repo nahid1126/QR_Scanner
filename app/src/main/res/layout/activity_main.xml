@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_color"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_color"
+        android:padding="20dp"
         android:src="@drawable/main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +22,9 @@
         android:id="@+id/btnScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="QR Scan"
         android:layout_marginTop="500dp"
-        android:backgroundTint="#B34CAF50"
+        android:backgroundTint="#009688"
+        android:text="QR Scan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnQrGenerate"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,11 +34,11 @@
         android:id="@+id/btnQrGenerate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="#009688"
+        android:text="QR Generate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="#009688"
-        android:layout_marginTop="500dp"
-        android:text="QR Generate"
         app:layout_constraintStart_toEndOf="@+id/btnScan"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.zxing.BarcodeFormat;
@@ -39,6 +41,10 @@ public class QRGenerateActivity extends AppCompatActivity {
 
     private void generateQrCode() {
         String qrText = qrGenerateText.getText().toString().trim();
+        if (TextUtils.isEmpty(qrText)) {
+            Toast.makeText(this, "Enter Your Text First!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
         multiFormatWriter = new MultiFormatWriter();
 
         try {
